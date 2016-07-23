@@ -1,6 +1,6 @@
 TOP = 100
 EGGS = 2
-$it = 0
+$iterations = 0
 $m = Array.new(TOP + 1){Array.new(TOP + 1){Array.new(EGGS + 1){Array.new(TOP + 1)}}}
 
 def f high, top, eggs, trials
@@ -8,9 +8,9 @@ def f high, top, eggs, trials
     return $m[high][top][eggs][trials]
   end
 
-  $it += 1
+  $iterations += 1
 
-  if $it > 10000000
+  if $iterations > 10000000
     return Float::INFINITY
   end
 
@@ -41,4 +41,4 @@ def f high, top, eggs, trials
 end
 
 puts f 0, TOP, EGGS, 0   # 14
-puts $it                 # 4587828
+puts $iterations         # 4587828
