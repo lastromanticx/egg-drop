@@ -39,7 +39,7 @@ def f high, top, eggs, trials
   $iterations += 1
 
   # we find a possible solution when we know about all the floors
-  if high >= top - 1 && eggs >= 0
+  if high >= top - 1
     return trials
   end
 
