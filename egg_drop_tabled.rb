@@ -67,9 +67,7 @@ def f high, top, eggs, trials
     # the longer of these two possibilities to minimize on.
     best = [best,
       [
-       if eggs > 0 
-         then f(high, i, eggs - 1, trials + 1) 
-         else Float::INFINITY end,
+       f(high, i, eggs - 1, trials + 1),
        f(i, top, eggs, trials + 1)
       ].max
     ].min
