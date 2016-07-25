@@ -40,10 +40,8 @@ def f high, top, eggs
 # (1..range)
     best = [best, 1 +
       [
-       #if eggs > 0 
-            # f(0, range, eggs - 1)
+       # f(0, range, eggs - 1)
          f(high, i, eggs - 1),
-         #else Float::INFINITY end,
      # f(i, range, eggs)
        f(i, top, eggs)
       ].max
